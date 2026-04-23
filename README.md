@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧁 Honey Bakes - Premium Bakery & Professional Academy
 
-## Getting Started
+Welcome to the official repository of **Honey Bakes**, a world-class digital presence for an artisanal bakery and professional baking academy based in Tiruppur. This project is built with a focus on premium aesthetics, dynamic user interactions, and a "business-first" inquiry model.
 
-First, run the development server:
+---
 
+## ✨ Key Features
+
+### 🍰 Artisanal Cake Gallery
+- **Visual Showcase**: A high-end grid layout showcasing artisanal creations.
+- **Dynamic Filtering**: Easily browse between Cakes, Brownies, and Desserts.
+- **WhatsApp Integration**: A "Price-on-Inquiry" model where customers connect directly with the head chef to discuss requirements and pricing, ensuring high-quality engagement.
+
+### 🎓 Alumni Hall of Fame
+- **Success Stories**: A dedicated showcase of over 350+ graduates (like Rifa Fathima) who have launched their own successful baking businesses.
+- **Home Page Preview**: A curated "Hall of Fame" section on the landing page to build immediate trust and social proof.
+
+### 🕒 Smart Contact System
+- **Live Status Tracker**: Real-time analysis of the studio's operational status (Open/Closed) based on a 9:00 AM - 6:00 PM window.
+- **Today Highlighting**: Automatically identifies and highlights the current day of the week with a signature "Today" badge.
+- **Navigation Ready**: Integrated Google Maps deep-linking for instant navigational redirects.
+
+### 🚀 Performance & UI/UX
+- **Fully Responsive**: Optimized for every screen size - from mobile phones and tablets to large TV displays.
+- **Honey Rose Theme**: A signature visual identity using glassmorphism, smooth Framer Motion animations, and a curated "Honey Rose" color palette.
+- **Optimized Navigation**: A global navbar with "Scroll-to-Top" logic for seamless one-page and multi-page transitions.
+- **LCP Optimized**: Critical "above-the-fold" images are prioritized for lightning-fast initial load speeds.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: Optimized for Vercel / Netlify.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd honey-bakes-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install --legacy-peer-deps
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Production Strategy
 
-To learn more about Next.js, take a look at the following resources:
+- **Zero-Price Display**: All pricing is hidden from the UI to encourage direct customer-to-owner interaction via WhatsApp.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Interactive Branding**: Every click, hover, and scroll is animated to provide a premium "luxury" feel, reflecting the quality of the artisanal products.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👨‍🍳 Designed & Developed by
+**Sheik Mohammed** - Dedicated to crafting digital excellence for Honey Bakes. ❤️
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+© 2026 Honey Bakes. All rights reserved.

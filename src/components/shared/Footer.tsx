@@ -2,25 +2,42 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Instagram, Facebook, Twitter, MapPin, Phone, Clock, CheckCircle2 } from 'lucide-react'
+import { Instagram, Facebook, Twitter, MapPin, Phone, Clock, CheckCircle2, Loader2, AlertCircle } from 'lucide-react'
 
 export default function Footer() {
   const [subscribed, setSubscribed] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError('');
     const formData = new FormData(e.currentTarget);
-    const email = formData.get('email');
+    const email = formData.get('email') as string;
     
-    // SaaS Simulation: Store in localStorage
-    const existing = JSON.parse(localStorage.getItem('newsletter_emails') || '[]');
-    localStorage.setItem('newsletter_emails', JSON.stringify([...existing, { email, date: new Date().toISOString() }]));
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    setLoading(true);
     
-    setSubscribed(true);
-    
-    setTimeout(() => {
-       window.open(`https://wa.me/919384313025?text=Hi, I subscribed to Honey Bakes updates with ${email}!`, '_blank');
-    }, 2000);
+    try {
+      // Production SaaS Simulation: Wait for API response
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      const existing = JSON.parse(localStorage.getItem('newsletter_emails') || '[]');
+      if (existing.find((sub: any) => sub.email === email)) {
+        throw new Error('This email is already subscribed!');
+      }
+      
+      localStorage.setItem('newsletter_emails', JSON.stringify([...existing, { email, date: new Date().toISOString() }]));
+      setSubscribed(true);
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   const socialLinks = [
@@ -93,17 +110,36 @@ export default function Footer() {
             </div>
           ) : (
             <>
-              <p className="text-white mb-6 font-black drop-shadow-sm opacity-90">Subscribe for sweet updates and course alerts.</p>
+              <p className="text-white mb-4 font-black drop-shadow-sm opacity-90">Subscribe for sweet updates and course alerts.</p>
               <form className="flex flex-col gap-3" onSubmit={handleSubscribe}>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  placeholder="Your email address" 
-                  className="bg-white/20 border border-white/30 rounded-2xl py-4 px-6 w-full focus:outline-none focus:border-white placeholder:text-white/70 text-white shadow-inner font-black"
-                />
-                <button type="submit" className="bg-white text-honey py-4 rounded-2xl font-black text-lg hover:scale-[1.02] transition-all shadow-2xl">
-                  Join the Circle
+                <div className="relative">
+                  <input 
+                    type="email" 
+                    name="email"
+                    required
+                    disabled={loading}
+                    placeholder="Your email address" 
+                    className="bg-white/20 border border-white/30 rounded-2xl py-4 px-6 w-full focus:outline-none focus:border-white placeholder:text-white/70 text-white shadow-inner font-black disabled:opacity-50 transition-colors"
+                  />
+                </div>
+                {error && (
+                  <p className="text-red-300 text-xs font-bold flex items-center gap-1.5 mt-1 animate-in slide-in-from-top-1">
+                    <AlertCircle size={14} /> {error}
+                  </p>
+                )}
+                <button 
+                  type="submit" 
+                  disabled={loading}
+                  className="bg-white text-honey py-4 rounded-2xl font-black text-lg hover:scale-[1.02] transition-all shadow-2xl disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 size={20} className="animate-spin" />
+                      Processing...
+                    </>
+                  ) : (
+                    'Join the Circle'
+                  )}
                 </button>
               </form>
             </>

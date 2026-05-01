@@ -4,26 +4,18 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const ALUMNI_SHOWCASE = [
-  { id: 1,  name: 'Anitha Sugumar',      achievement: 'Founder of "The Sugar Studio"', work: 'Signature Tiered Wedding Cakes', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=100&w=2000' },
-  { id: 2,  name: 'Rajesh Kumar',       achievement: 'Head Pastry Chef at Grand Hyatt', work: 'European Artisanal Breads', image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=100&w=2000' },
-  { id: 3,  name: 'Sneha Venkatesh',    achievement: 'Celebrity Cake Artist',        work: 'Hyper-Realistic Sculpted Cakes', image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=100&w=2000' },
-  { id: 4,  name: 'Karthik Raja',       achievement: 'Entrepreneur - Crust & Crumb', work: 'Premium French Macarons', image: 'https://images.unsplash.com/photo-1481391243133-f96216dcb5d2?q=100&w=2000' },
-  { id: 5,  name: 'Meera Krishnan',     achievement: 'Baking Influencer (100k+)',    work: 'Healthy & Vegan Dessert Series', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?q=100&w=2000' },
-  { id: 6,  name: 'Arjun Das',          achievement: 'Silver Medalist - National Bake-off', work: 'Innovative Rasamalai Fusion Cake', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=100&w=2000' },
-  { id: 7,  name: 'Divya Bharathi',     achievement: 'Director of "Dreamy Bakes"',   work: 'Exquisite Floral Buttercream Art', image: 'https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=100&w=2000' },
-  { id: 8,  name: 'Naveen Prabhu',      achievement: 'Chocolatier & Innovation Lead', work: 'Dark Chocolate Truffle Collection', image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=100&w=2000' },
-  { id: 9,  name: 'Kaviya Selvam',      achievement: 'Winner of Regional Pastry Cup', work: 'Modern Mirror Glazed Entremets', image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=100&w=2000' },
-  { id: 10, name: 'Gokul Chandran',     achievement: 'Master Instructor at Bake Academy', work: 'Advanced Fondant Techniques', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=100&w=2000' },
-  { id: 11, name: 'Rifa Fathima',       achievement: 'Founder of "Bouquet Bakes"',   work: 'Specialty Artisanal Brownies', image: '/images/gallery/rifafathima.png' },
-  { id: 12, name: 'Sanjay Mani',        achievement: 'Artisan Donuts Co.',           work: 'Specialty Gourmet Donuts', image: 'https://images.unsplash.com/photo-1527515545081-5db817172677?q=100&w=2000' },
-  { id: 13, name: 'Pooja Hegde',        achievement: 'Korean Bento Queen',           work: 'Minimalist Bento Cakes', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?q=100&w=2000' },
-  { id: 14, name: 'Varun Shanth',       achievement: 'Chef at Hyatt Regency',        work: 'Gluten-free Patisserie', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?q=100&w=2000' },
-  { id: 15, name: 'Swetha Reddy',       achievement: 'Founder - Tart & Soul',        work: 'Premium Celebration Cakes', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=100&w=2000' },
-  { id: 16, name: 'Mani Ratnam',        achievement: 'Fusion Desi Bakes',            work: 'Gulab Jamun Fusion Cakes', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=100&w=2000' },
-  { id: 17, name: 'Gayathri Devi',      achievement: 'The Conscious Baker',          work: 'Healthy Keto Bakes', image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=100&w=2000' },
-  { id: 18, name: 'Rahul Dev',          achievement: 'Cheesecake Factory Lead',      work: 'NY Style Classic Cheesecakes', image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=100&w=2000' },
-  { id: 19, name: 'Keerthi Suresh',     achievement: 'Macaron Masterclass Grad',     work: 'Savory/Sweet Macarons', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=100&w=2000' },
-  { id: 20, name: 'Vikesh Kumar',       achievement: 'The Sourdough Lab',            work: 'Artisanal Wild Yeast Breads', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=100&w=2000' },
+  { id: 11, name: 'Logesh',      achievement: 'Founder of srithikahomemadecakes', work: 'Custom Celebration Cakes', image: '/images/alumni-images/alumni-11.png' },
+  { id: 1,  name: 'Swetha',      achievement: 'Founder of swe_oventales', work: 'Signature Tiered Wedding Cakes', image: '/images/alumni-images/alumni-1.jpg' },
+  { id: 2,  name: 'Priyadharshini',       achievement: 'Founder of browniee.would', work: 'European Artisanal Breads', image: '/images/alumni-images/alumni-2.jpg' },
+  { id: 12, name: 'Logesh',      achievement: 'Founder of srithikahomemadecakes', work: 'Custom Celebration Cakes', image: '/images/alumni-images/alumni-12.png' },
+  { id: 3,  name: 'Veerasaranya',    achievement: 'Founder of vikus_yum_yum',        work: 'Hyper-Realistic Sculpted Cakes', image: '/images/alumni-images/alumni-3.jpg' },
+  { id: 4,  name: 'Shabana',       achievement: 'Founder of shabas bakes', work: 'Premium French Macarons', image: '/images/alumni-images/alumni-4.jpg' },
+  { id: 5,  name: 'Mythili',     achievement: 'Founder of moni_bakes_777',    work: 'Healthy & Vegan Dessert Series', image: '/images/alumni-images/alumni-5.jpg' },
+  { id: 6,  name: 'Nasreen Abdul',          achievement: 'Founder of sweeet_storiess', work: 'Innovative Rasamalai Fusion Cake', image: '/images/alumni-images/alumni-6.jpg' },
+  { id: 7,  name: 'Karthika',     achievement: 'Founder of G.K cakes',   work: 'Exquisite Floral Buttercream Art', image: '/images/alumni-images/alumn-7.jpg' },
+  { id: 8,  name: 'Srimathi',      achievement: 'Founder of purpledot_cake_', work: 'Dark Chocolate Truffle Collection', image: '/images/alumni-images/alumni-8.jpg' },
+  { id: 9,  name: 'Subalakshmi',      achievement: 'Founder of vashtika_Homemade_cakes', work: 'Modern Mirror Glazed Entremets', image: '/images/alumni-images/alumni-9.jpg' },
+  { id: 10, name: 'Poorvika',     achievement: 'Founder of heavenly treats', work: 'Advanced Fondant Techniques', image: '/images/alumni-images/alumni-10.jpg' },
 ]
 
 export default function AlumniPage() {
@@ -51,34 +43,26 @@ export default function AlumniPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.05, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="group relative h-[600px] rounded-[60px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/20 bg-white/10 backdrop-blur-md"
+                className={`group relative bg-[#FAFAFA] p-5 pb-12 md:p-8 md:pb-16 shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.5)] hover:-translate-y-4 transition-all duration-500 ${idx % 2 === 0 ? '-rotate-2' : 'rotate-2'} hover:rotate-0 z-10 hover:z-20 max-w-lg mx-auto w-full border border-gray-200`}
               >
-                <Image 
-                  src={alumni.image} 
-                  alt={alumni.name} 
-                  fill 
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-90 group-hover:opacity-100"
-                  unoptimized={true}
-                  priority={idx < 4}
-                />
+                {/* Polaroid Photo Frame */}
+                <div className="relative w-full aspect-square bg-gray-100 shadow-inner border border-gray-200 flex items-center justify-center p-2 overflow-hidden">
+                  <Image 
+                    src={alumni.image} 
+                    alt={alumni.name} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-700"
+                    unoptimized={true}
+                  />
+                </div>
                 
-                {/* Premium Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
-                
-                {/* High-End Content Presentation */}
-                <div className="absolute inset-0 flex flex-col justify-end p-12 translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
-                  <div className="space-y-4">
-                    <div className="space-y-1">
-                      <p className="text-honey font-black uppercase tracking-[0.4em] text-xs bg-white px-5 py-2 rounded-full inline-block mb-3 shadow-xl">WORLD-CLASS GRADUATE</p>
-                      <h3 className="text-white text-5xl md:text-6xl font-serif font-black leading-tight drop-shadow-2xl">{alumni.name}</h3>
-                    </div>
-                    
-                    <div className="space-y-2 border-l-4 border-honey pl-6 backdrop-blur-sm bg-black/10 py-4 rounded-r-3xl">
-                      <p className="text-white font-black text-2xl italic tracking-tight">{alumni.achievement}</p>
-                      <p className="text-honey font-black text-lg uppercase tracking-[0.2em]">{alumni.work}</p>
-                    </div>
-                  </div>
+                {/* Handwritten / Polaroid Text Section */}
+                <div className="pt-8 text-center flex flex-col items-center">
+                  <h3 className="text-black text-4xl font-serif font-black mb-2">{alumni.name}</h3>
+                  <p className="text-gray-600 font-medium text-xl italic mb-4">"{alumni.achievement}"</p>
+                  <div className="w-16 h-1 bg-honey mb-4" />
+                  <p className="text-black font-bold text-xs uppercase tracking-[0.25em]">{alumni.work}</p>
                 </div>
               </motion.div>
             ))}

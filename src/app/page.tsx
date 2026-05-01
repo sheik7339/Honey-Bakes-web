@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <AlumniPreview />
       <RecentCakes />
+      <AlumniPreview />
       <FeaturedCourses />
       
       {/* Testimonials or About Brief Section */}
